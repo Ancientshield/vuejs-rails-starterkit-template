@@ -1,0 +1,30 @@
+{
+  "name": "vuejs-rails-starterkit",
+  "env": {
+    "SECRET_KEY_BASE": {
+      "generator": "secret"
+    },
+    "BUNDLE_WITHOUT": "development:test:staging",
+    "RACK_ENV": "production",
+    "RAILS_ENV": "production",
+    "RAILS_LOG_TO_STDOUT": "enabled",
+    "RAILS_SERVE_STATIC_FILES": "enabled"
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "stack": "heroku-18"
+}
